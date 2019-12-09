@@ -77,7 +77,7 @@ setInterval(function(){
 
 			var sty=getComputedStyle(p1,null);
 			num=parseInt(sty.marginLeft);
-			if(num>-400){
+			if(num>-300){
 				num=num-1;
 				num=num+"px";
 				p1.style.marginLeft=num;
