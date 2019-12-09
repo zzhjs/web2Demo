@@ -15,7 +15,6 @@ navList[0].style.backgroundColor="red";
 navList[0].style.color="#ccc";
 function next(){
 	i++;
-		console.log(i);
 	navChange();
 	animate(slider,{left:-1200*i},function(){
 		if(slider.style.left=="-7200px"){
