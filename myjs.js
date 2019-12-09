@@ -2,7 +2,7 @@
 * @Author: we
 * @Date:   2019-12-08 13:05:20
 * @Last Modified by:   we
-* @Last Modified time: 2019-12-09 10:48:16
+* @Last Modified time: 2019-12-09 17:00:24
 */
 var box=document.getElementById("box");
 var slider=document.getElementById("slider");
@@ -17,7 +17,7 @@ function next(){
 	i++;
 	navChange();
 	animate(slider,{left:-1200*i},function(){
-		if(slider.style.left=="-7200px"){
+		if(i>=6){
 			slider.style.left="-1200px";
 			i=1;
 		}
@@ -27,7 +27,7 @@ function pre(){
 	i--;
 	navChange();
 	animate(slider,{left:-1200*i},function(){
-		if(slider.style.left=="0px"){
+		if(i<=0){
 			slider.style.left="-6000px";
 			i=5;
 		}
@@ -77,7 +77,7 @@ setInterval(function(){
 
 			var sty=getComputedStyle(p1,null);
 			num=parseInt(sty.marginLeft);
-			if(num>-300){
+			if(num>-400){
 				num=num-1;
 				num=num+"px";
 				p1.style.marginLeft=num;
