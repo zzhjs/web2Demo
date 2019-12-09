@@ -17,7 +17,7 @@ function next(){
 	i++;
 	navChange();
 	animate(slider,{left:-1200*i},function(){
-		if(i>=6){
+		if(slider.style.left=="-7200px"){
 			slider.style.left="-1200px";
 			i=1;
 		}
@@ -27,7 +27,7 @@ function pre(){
 	i--;
 	navChange();
 	animate(slider,{left:-1200*i},function(){
-		if(i<=0){
+		if(slider.style.left=="0px"){
 			slider.style.left="-6000px";
 			i=5;
 		}
