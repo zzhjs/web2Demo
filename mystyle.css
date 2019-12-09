@@ -1,0 +1,95 @@
+/*
+* @Author: we
+* @Date:   2019-12-08 12:21:38
+* @Last Modified by:   we
+* @Last Modified time: 2019-12-08 15:51:42
+*/
+.top1{
+    position: relative;
+	height: 25px;
+	background: #ccc;	
+} 
+.top1>img{
+	margin-top: 4px;
+	position: absolute;
+	left: 300px;
+	float: left;
+}
+.text{
+	height: 25px;
+	position: absolute;
+	right: 300px;
+	width: 1000px;
+	float: left;
+	overflow: hidden;
+}
+.p1{
+	position: absolute;
+	margin-left: 1000px;
+	color: red;
+	padding-bottom:  2px;
+}
+.box{
+	height: 372px;
+	width: 1200px;
+	margin:20px auto;
+	border: 1px solid red;
+	position: relative;
+	overflow: hidden;
+}
+ul,li{ padding:0;margin:0;list-style:none}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+div{
+	display: block;
+}
+.slider{
+	width: 8400px;
+	position: absolute;
+	left: -1200px;
+}
+.slide{
+	width: 1200px;
+	overflow: hidden;
+	float: left;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	top: 175px;
+	line-height: 50px;
+	background: red;
+	font-size: 30px;
+	position: absolute;
+	opacity: 0;
+	color: #ccc;
+}
+.nav{
+	position: absolute;
+	left: 500px;
+	bottom: 10px;
+}
+
+.nav>li{
+	float:left;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50px;
+}
+
