@@ -12,14 +12,14 @@
 .top1>img{
 	margin-top: 4px;
 	position: absolute;
-	left: 300px;
+	left: 200px;
 	float: left;
 }
 .text{
 	height: 25px;
 	position: absolute;
 	right: 300px;
-	width: 1000px;
+	width: 900px;
 	float: left;
 	overflow: hidden;
 }
