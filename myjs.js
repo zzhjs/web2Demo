@@ -2,7 +2,7 @@
 * @Author: we
 * @Date:   2019-12-08 13:05:20
 * @Last Modified by:   we
-* @Last Modified time: 2019-12-09 17:00:24
+* @Last Modified time: 2019-12-10 13:46:29
 */
 var box=document.getElementById("box");
 var slider=document.getElementById("slider");
@@ -11,27 +11,39 @@ var right=document.getElementById("right");
 var left=document.getElementById("left");
 var p1=document.getElementById("p1");
 var i=1;
+var isMoving=false;
 navList[0].style.backgroundColor="red";
 navList[0].style.color="#ccc";
 function next(){
-	i++;
-	navChange();
-	animate(slider,{left:-1200*i},function(){
-		if(slider.style.left=="-7200px"){
-			slider.style.left="-1200px";
-			i=1;
-		}
-	});
+	if(!isMoving){
+		isMoving=true;
+		i++;
+		navChange();
+		animate(slider,{left:-1200*i},function(){
+			if(i>=6){
+				slider.style.left="-1200px";
+				i=1;
+			}
+			isMoving=false;
+		});
+		
+	}
+	
 }
 function pre(){
-	i--;
-	navChange();
-	animate(slider,{left:-1200*i},function(){
-		if(slider.style.left=="0px"){
-			slider.style.left="-6000px";
-			i=5;
-		}
-	});
+	if(!isMoving){
+		isMoving=true;
+		i--;
+		navChange();
+		animate(slider,{left:-1200*i},function(){
+			if(i<=0){
+				slider.style.left="-6000px";
+				i=5;
+			}
+			isMoving=false;
+		});
+		
+	}
 }
 var time1=setInterval(next,3000);
 box.onmouseover=function(){
@@ -59,11 +71,11 @@ function navChange(){
 		navList[k].style.backgroundColor="#ccc";
 		navList[k].style.color="black";
 	}
-	if(i===6){
+	if(i>5){
 		navList[0].style.backgroundColor="red";
 		navList[0].style.color="#ccc";
 	}
-	else if(i===0){
+	else if(i<1){
 		navList[4].style.backgroundColor="red";
 		navList[4].style.color="#ccc";
 	}
